@@ -2,6 +2,10 @@
 
 namespace App\Entity;
 
+/**
+ * Class Gif
+ * @package App\Entity
+ */
 class Gif implements GifInterface
 {
     /**

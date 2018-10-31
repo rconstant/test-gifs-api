@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\DataProvider\GifDataProvider;
 use App\Util\GifUtil;
 
 class GifService
@@ -15,7 +16,7 @@ class GifService
     {
         $results = [];
         foreach (explode(' ', $q) as $word) {
-            GifUtil::search($word, $results);
+            GifUtil::search($word, GifDataProvider::data(), $results);
         }
 
         GifUtil::order($results);
