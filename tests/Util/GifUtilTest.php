@@ -13,9 +13,9 @@ class GifUtilTest extends TestCase
     /**
      * @dataProvider \App\Tests\DataProvider\GifDataProvider::validTermProvider()
      *
-     * @param $term
+     * @param string $term
      */
-    public function testSearchValidTerm($term)
+    public function testSearchValidTerm(string $term)
     {
         $results = [];
         GifUtil::search($term, GifDataProvider::data(), $results);
@@ -27,9 +27,9 @@ class GifUtilTest extends TestCase
     /**
      * @dataProvider \App\Tests\DataProvider\GifDataProvider::invalidTermProvider()
      *
-     * @param $term
+     * @param string $term
      */
-    public function testSearchInvalidTerm($term)
+    public function testSearchInvalidTerm(string $term)
     {
         $results = [];
         GifUtil::search($term, GifDataProvider::data(), $results);

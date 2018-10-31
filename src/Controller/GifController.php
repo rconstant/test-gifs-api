@@ -42,7 +42,7 @@ class GifController extends AbstractController
         $datas = $this->gifService->search($q);
 
         if (count($datas) === 0) {
-            throw new NotFoundHttpException('No GIFs found');
+            throw new NotFoundHttpException('No GIFs found.');
         }
 
         return $datas;

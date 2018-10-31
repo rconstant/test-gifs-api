@@ -12,9 +12,9 @@ class GifServiceTest extends TestCase
     /**
      * @dataProvider \App\Tests\DataProvider\GifDataProvider::validTermProvider()
      *
-     * @param $term
+     * @param string $term
      */
-    public function testSearchValid($term)
+    public function testSearchValid(string $term)
     {
         $gifService = new GifService();
         $results = $gifService->search($term);
@@ -26,9 +26,9 @@ class GifServiceTest extends TestCase
     /**
      * @dataProvider \App\Tests\DataProvider\GifDataProvider::invalidTermProvider()
      *
-     * @param $term
+     * @param string $term
      */
-    public function testSearchInvalid($term)
+    public function testSearchInvalid(string $term)
     {
         $gifService = new GifService();
         $results = $gifService->search($term);

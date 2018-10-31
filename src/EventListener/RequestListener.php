@@ -20,8 +20,8 @@ class RequestListener
     }
 
     public function onRequest(GetResponseEvent $event) {
-        if (!$event->getRequest()->headers->has('API_KEY') || $event->getRequest()->headers->get('API_KEY') != $this->apiKey) {
-            throw new AccessDeniedHttpException('Invalid API KEY');
+        if (!$event->getRequest()->headers->has('X-API-KEY') || $event->getRequest()->headers->get('X-API-KEY') != $this->apiKey) {
+            throw new AccessDeniedHttpException('Invalid API KEY.');
         }
     }
 }
