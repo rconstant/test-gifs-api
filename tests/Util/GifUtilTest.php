@@ -28,7 +28,6 @@ class GifUtilTest extends TestCase
      */
     public function testSearchValidTerm(string $term)
     {
-
         $results = [];
         GifUtil::search($term, $this->gifDataProvider->data(), $results);
         $this->assertInternalType('array', $results);

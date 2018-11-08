@@ -29,7 +29,7 @@ class GifServiceTest extends WebTestCase
      *
      * @param string $term
      */
-    public function testSearchValid(string $term)
+    public function testSearchValid(?string $term)
     {
         $gifService = new GifService($this->gifDataProvider);
         $results = $gifService->search($term);
@@ -40,10 +40,11 @@ class GifServiceTest extends WebTestCase
 
     /**
      * @dataProvider \App\Tests\DataProvider\GifDataProvider::invalidTermProvider()
+     * @dataProvider \App\Tests\DataProvider\GifDataProvider::nullTermProvider()
      *
      * @param string $term
      */
-    public function testSearchInvalid(string $term)
+    public function testSearchInvalid(?string $term)
     {
         $gifService = new GifService($this->gifDataProvider);
         $results = $gifService->search($term);

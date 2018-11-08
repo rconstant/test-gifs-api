@@ -10,10 +10,11 @@ class GifControllerTest extends AbstractControllerTest
 {
     /**
      * @dataProvider \App\Tests\DataProvider\GifDataProvider::validTermProvider()
+     * @dataProvider \App\Tests\DataProvider\GifDataProvider::nullTermProvider()
      *
      * @param string $term
      */
-    public function testSearchUnauthorized(string $term)
+    public function testSearchUnauthorized(?string $term)
     {
         $data = [
             'code' => 403,
@@ -27,10 +28,11 @@ class GifControllerTest extends AbstractControllerTest
 
     /**
      * @dataProvider \App\Tests\DataProvider\GifDataProvider::validTermProvider()
+     * @dataProvider \App\Tests\DataProvider\GifDataProvider::nullTermProvider()
      *
      * @param string $term
      */
-    public function testSearchValid(string $term)
+    public function testSearchValid(?string $term)
     {
         $response = $this->sendRequest('GET', '/gifs/search?q=' . $term, [], parent::API_KEY_VALID);
         parent::assertResponse($response, 200);

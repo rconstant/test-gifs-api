@@ -19,11 +19,21 @@ class GifDataProvider
     /**
      * @return array
      */
+    public function nullTermProvider()
+    {
+        return [
+            [null]
+        ];
+    }
+
+    /**
+     * @return array
+     */
     public function invalidTermProvider()
     {
         return [
             ['dog'],
-            ['math'],
+            ['math']
         ];
     }
 }

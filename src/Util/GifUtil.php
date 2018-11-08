@@ -10,8 +10,6 @@ class GifUtil
      * @param string $word
      * @param array $datas
      * @param array $results
-     *
-     * @return array
      */
     public static function search(string $word, array $datas, array &$results = []) {
         $input = preg_quote($word, '~');
@@ -25,7 +23,6 @@ class GifUtil
                 }
             }
         }
-        return $results;
     }
 
     /**
