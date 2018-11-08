@@ -13,7 +13,7 @@ class GifDataProvider
     /**
      * @return array
      */
-    public static function data()
+    public function data()
     {
         return [
             new Gif('Robot', 'https://gph.is/28Sr91i', [
