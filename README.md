@@ -1,6 +1,9 @@
 ### Installation instructions
 
     composer update
+    bin/phpunit
+    bin/console server:run
+    
 
 ### Development task instructions
 #### Objective
